@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    background-color: #cafaf0;
+}
+
+h1, h2 {
+    color: #222;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    width: 280px;
+    max-width: 90%;
+}
+
+button {
+    padding: 9px 12px;
+    margin-top: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+#mensaje {
+    font-weight: bold;
+}
+
+#totalNomina {
+    font-size: 20px;
+    font-weight: bold;
+}

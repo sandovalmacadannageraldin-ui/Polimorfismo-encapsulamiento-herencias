@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda y carrito de compras</title>
+    <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+
+    <h1>Tienda y carrito de compras</h1>
+
+    <h2>Registrar producto</h2>
+
+    <label>Identificador:</label>
+    <input type="text" id="identificador">
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre">
+
+    <label>Precio:</label>
+    <input type="number" id="precio">
+
+    <label>Tipo de producto:</label>
+    <select id="tipo">
+        <option value="fisico">Físico</option>
+        <option value="digital">Digital</option>
+    </select>
+
+    <button onclick="registrarProducto()">Registrar producto</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Productos registrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Precio</th>
+                <th>Costo final</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+    </table>
+
+    <h2>Carrito de compras</h2>
+
+    <label>Identificador del producto:</label>
+    <input type="text" id="idCarrito">
+
+    <label>Cantidad:</label>
+    <input type="number" id="cantidad" value="1">
+
+    <button onclick="agregarCarrito()">Agregar al carrito</button>
+    <button onclick="quitarCarrito()">Quitar del carrito</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Tipo</th>
+                <th>Precio unitario</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCarrito"></tbody>
+    </table>
+
+    <h2 id="total">Total: $0</h2>
+
+    <script src="tienda.js"></script>
+
+</body>
+</html>

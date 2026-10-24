@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    background-color: #c6f2cc;
+}
+
+h1, h2 {
+    color: #222;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    width: 250px;
+    max-width: 90%;
+}
+
+button {
+    padding: 9px 12px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid rgb(129, 183, 137);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #8bc77f;
+}
+
+#mensaje, #resultadoConsulta {
+    font-weight: bold;
+}

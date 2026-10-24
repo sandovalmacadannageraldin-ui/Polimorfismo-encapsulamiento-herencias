@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca y préstamos</title>
+    <link rel="stylesheet" href="biblioteca.css">
+</head>
+<body>
+
+    <h1>Sistema de biblioteca y préstamos</h1>
+
+    <h2>Registrar recurso</h2>
+
+    <label>Código:</label>
+    <input type="text" id="codigo">
+
+    <label>Título:</label>
+    <input type="text" id="titulo">
+
+    <label>Tipo de recurso:</label>
+    <select id="tipo">
+        <option value="impreso">Libro impreso</option>
+        <option value="digital">Recurso digital</option>
+    </select>
+
+    <button onclick="registrarRecurso()">Registrar recurso</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Recursos registrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Tipo</th>
+                <th>Disponibilidad</th>
+                <th>Plazo de préstamo</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaRecursos"></tbody>
+    </table>
+
+    <h2>Realizar préstamo</h2>
+
+    <label>Código del recurso:</label>
+    <input type="text" id="codigoPrestamo">
+
+    <label>Nombre del usuario:</label>
+    <input type="text" id="usuario">
+
+    <button onclick="prestarRecurso()">Prestar recurso</button>
+
+    <h2>Historial de préstamos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Usuario</th>
+                <th>Plazo</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPrestamos"></tbody>
+    </table>
+
+    <script src="biblioteca.js"></script>
+
+</body>
+</html>

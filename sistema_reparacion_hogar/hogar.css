@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    background-color: #f3c4c4;
+}
+
+h1, h2 {
+    color: #222;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    width: 250px;
+    max-width: 90%;
+}
+
+button {
+    padding: 9px 12px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-color: rgb(168, 77, 77);
+}
+
+th, td {
+    border: 1px solid rgb(207, 154, 154);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #a77171;
+}
+
+#mensaje {
+    font-weight: bold;
+}

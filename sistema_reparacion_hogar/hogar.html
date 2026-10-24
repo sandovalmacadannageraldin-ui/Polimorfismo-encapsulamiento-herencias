@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de reparación del hogar</title>
+    <link rel="stylesheet" href="hogar.css">
+</head>
+<body>
+
+    <h1>Servicios de reparación del hogar</h1>
+
+    <h2>Registrar servicio</h2>
+
+    <label>Código del servicio:</label>
+    <input type="text" id="codigo">
+
+    <label>Descripción:</label>
+    <input type="text" id="descripcion">
+
+    <label>Tarifa base:</label>
+    <input type="number" id="tarifa" min="0" step="any">
+
+    <label>Tipo de servicio:</label>
+    <select id="tipo">
+        <option value="electricidad">Electricidad</option>
+        <option value="plomeria">Plomería</option>
+        <option value="mantenimiento">Mantenimiento</option>
+    </select>
+
+    <button onclick="registrarServicio()">Registrar servicio</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Servicios registrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Tarifa base</th>
+                <th>Costo final</th>
+            </tr>
+        </thead>
+        <tbody id="tablaServicios"></tbody>
+    </table>
+
+    <h2>Crear orden de trabajo</h2>
+
+    <label>Número de orden:</label>
+    <input type="text" id="numeroOrden">
+
+    <label>Nombre del cliente:</label>
+    <input type="text" id="cliente">
+
+    <label>Código del servicio solicitado:</label>
+    <input type="text" id="codigoOrden">
+
+    <button onclick="crearOrden()">Crear orden</button>
+
+    <h2>Órdenes de trabajo</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Número de orden</th>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Tipo</th>
+                <th>Costo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaOrdenes"></tbody>
+    </table>
+
+    <script src="hogar.js"></script>
+
+</body>
+</html>

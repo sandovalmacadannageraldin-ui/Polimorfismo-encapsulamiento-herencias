@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción y cuidado de mascotas</title>
+    <link rel="stylesheet" href="mascottas.css">
+</head>
+<body>
+
+    <h1>Sistema de adopción y cuidado de mascotas</h1>
+
+    <h2>Registrar mascota</h2>
+
+    <label>Identificador:</label>
+    <input type="text" id="identificador">
+
+    <label>Nombre de la mascota:</label>
+    <input type="text" id="nombre">
+
+    <label>Edad en años:</label>
+    <input type="number" id="edad" min="0" step="1">
+
+    <label>Tipo de mascota:</label>
+    <select id="tipo">
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+    </select>
+
+    <button onclick="registrarMascota()">Registrar mascota</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Mascotas registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Tipo</th>
+                <th>Cuidados</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaMascotas"></tbody>
+    </table>
+
+    <h2>Registrar solicitud de adopción</h2>
+
+    <label>Número de solicitud:</label>
+    <input type="text" id="numeroSolicitud">
+
+    <label>Nombre del adoptante:</label>
+    <input type="text" id="adoptante">
+
+    <label>Identificador de la mascota:</label>
+    <input type="text" id="idMascota">
+
+    <button onclick="registrarSolicitud()">Registrar solicitud</button>
+
+    <h2>Solicitudes de adopción</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Adoptante</th>
+                <th>Mascota</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaSolicitudes"></tbody>
+    </table>
+
+    <script src="mascotas.js"></script>
+
+</body>
+</html>

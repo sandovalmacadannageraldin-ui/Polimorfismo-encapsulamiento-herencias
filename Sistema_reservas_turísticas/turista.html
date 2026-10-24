@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de reservas turísticas</title>
+    <link rel="stylesheet" href="turista.css">
+</head>
+<body>
+
+    <h1>Sistema de reservas turísticas</h1>
+
+    <h2>Registrar una reserva</h2>
+
+    <label>Código de la reserva:</label>
+    <input type="text" id="codigo">
+
+    <label>Nombre del cliente:</label>
+    <input type="text" id="cliente">
+
+    <label>Fecha de la reserva:</label>
+    <input type="date" id="fecha">
+
+    <label>Precio base:</label>
+    <input type="number" id="precio" min="0" step="any">
+
+    <label>Tipo de reserva:</label>
+    <select id="tipo">
+        <option value="hotel">Habitación de hotel</option>
+        <option value="tour">Recorrido turístico</option>
+    </select>
+
+    <button onclick="registrarReserva()">Registrar reserva</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Disponibilidad de cupos</h2>
+
+    <p id="disponibilidad"></p>
+
+    <h2>Reservas registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Tipo</th>
+                <th>Precio base</th>
+                <th>Costo final</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaReservas"></tbody>
+    </table>
+
+    <h2>Consultar una reserva</h2>
+
+    <label>Código de la reserva:</label>
+    <input type="text" id="codigoConsulta">
+
+    <button onclick="consultarReserva()">Consultar</button>
+
+    <p id="resultadoConsulta"></p>
+
+    <script src="turista.js"></script>
+
+</body>
+</html>

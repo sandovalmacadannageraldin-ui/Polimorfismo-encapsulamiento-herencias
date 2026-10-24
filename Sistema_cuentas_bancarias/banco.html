@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de cuentas bancarias</title>
+    <link rel="stylesheet" href="banco.css">
+</head>
+<body>
+
+    <h1>Sistema de cuentas bancarias</h1>
+
+    <h2>Registrar cuenta</h2>
+
+    <label>Número de cuenta:</label>
+    <input type="text" id="numero" placeholder="Ej: 1001">
+
+    <label>Titular:</label>
+    <input type="text" id="titular" placeholder="Nombre del titular">
+
+    <label>Saldo inicial:</label>
+    <input type="number" id="saldo" placeholder="Ej: 500000">
+
+    <label>Tipo de cuenta:</label>
+    <select id="tipo">
+        <option value="ahorros">Cuenta de ahorros</option>
+        <option value="corriente">Cuenta corriente</option>
+    </select>
+
+    <button onclick="registrarCuenta()">Registrar cuenta</button>
+
+    <hr>
+
+    <h2>Realizar operaciones</h2>
+
+    <label>Número de cuenta:</label>
+    <input type="text" id="numeroOperacion"
+           placeholder="Número de la cuenta">
+
+    <label>Valor:</label>
+    <input type="number" id="valor"
+           placeholder="Valor a consignar o retirar">
+
+    <button onclick="consignarDinero()">Consignar</button>
+    <button onclick="retirarDinero()">Retirar</button>
+    <button onclick="consultarSaldo()">Consultar saldo</button>
+
+    <p id="mensaje">Aquí aparecerá el resultado.</p>
+
+    <hr>
+
+    <h2>Cuentas registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Titular</th>
+                <th>Tipo</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+    <script src="banco.js"></script>
+</body>
+</html>

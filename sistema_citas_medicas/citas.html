@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de citas médicas</title>
+    <link rel="stylesheet" href="citas.css">
+</head>
+<body>
+
+    <h1>Agenda de citas médicas</h1>
+
+    <h2>Registrar profesional</h2>
+
+    <label>Identificación:</label>
+    <input type="text" id="identificacion">
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre">
+
+    <label>Especialidad:</label>
+    <select id="especialidad">
+        <option value="general">Medicina general</option>
+        <option value="especialista">Especialista</option>
+    </select>
+
+    <button onclick="registrarProfesional()">Registrar profesional</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Profesionales registrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Identificación</th>
+                <th>Nombre</th>
+                <th>Especialidad</th>
+                <th>Disponibilidad</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProfesionales"></tbody>
+    </table>
+
+    <h2>Programar cita</h2>
+
+    <label>Identificación del profesional:</label>
+    <input type="text" id="idProfesionalCita">
+
+    <label>Nombre del paciente:</label>
+    <input type="text" id="paciente">
+
+    <label>Fecha:</label>
+    <input type="date" id="fecha">
+
+    <label>Hora:</label>
+    <input type="time" id="hora">
+
+    <button onclick="programarCita()">Programar cita</button>
+
+    <h2>Citas registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Profesional</th>
+                <th>Especialidad</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Duración</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCitas"></tbody>
+    </table>
+
+    <script src="citas.js"></script>
+
+</body>
+</html>
